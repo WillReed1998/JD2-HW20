@@ -36,3 +36,6 @@ jobs:
     - name: Run Unit Tests
       if: ${{ github.event_name == 'pull_request' }}
       run: ./gradlew test
+
+    - name: Run chmod to make gradlew executable
+      run: chmod +x ./gradlew
